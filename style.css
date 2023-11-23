@@ -1,8 +1,9 @@
 .PageContainer{
-    width: 100%;
+    width: 100vw;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #FFF9F2;
 }
@@ -14,6 +15,7 @@
     justify-content: center;
     row-gap: 10px;
     background-color: #FFF9F2;
+    margin-bottom: 160px;
 }
 
 .PageTitleDiv{
@@ -44,4 +46,22 @@
     object-fit: cover;
     border-radius: 20px;
     margin: 10px 10px;
+}
+
+.LangImage:hover{
+    flex-basis: 18%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 10px 10px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1))
+}
+
+.LangImage:active{
+    flex-basis: 18%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 10px 10px;
+    opacity: 0.5;
 }
