@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ManyHello</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="PageContainer">
+        <div class="PageTitleDiv">
+            <div class="PageTitle">Say Hello</div>
+            <div class="PageSubTitle">In 50 languages</div>
+        </div>
+        <div id="languages" class="ContentContainer">
+            <img class="LangImage" src="/asset/Chinese.png" data-audio="/asset/Chinese.mp3">
+            <img class="LangImage" src="/asset/Italian.png" data-audio="/asset/Italian.mp3">
+            <img class="LangImage" src="/asset/Portuguese.png" data-audio="/asset/Portuguese.mp3">
+            <img class="LangImage" src="/asset/Chinese.png" data-audio="/asset/Chinese.mp3">
+            <img class="LangImage" src="/asset/Italian.png" data-audio="/asset/Italian.mp3">
+            <img class="LangImage" src="/asset/Portuguese.png" data-audio="/asset/Portuguese.mp3">
+        </div>
+    </div>
+
+    <script>
+        var languages = document.getElementById('languages');
+        var images = languages.getElementsByTagName('img');
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].addEventListener('click', function () {
+                var audio = new Audio(this.dataset.audio);
+                audio.play();
+            });
+        }
+    </script>
+
+</body>
+
+</html>
